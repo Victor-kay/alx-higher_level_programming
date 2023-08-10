@@ -2,7 +2,7 @@
 
 import random
 
-number = random.randint(-10, 10)
+number = random.randint(-100, 100)
 
 print(number)
 
