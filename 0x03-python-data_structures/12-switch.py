@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-
-def switch(a, b):
-    """Switch the values of a and b."""
-    a, b = b, a
-    return a, b
-
-a = 10
-b = 20
-a, b = switch(a, b)
-print("a =", a)
-print("b =", b)
+a = 89
+b = 10
+# Switch the values of a and b
+a, b = b, a
+print("a={:d} - b={:d}".format(a, b))
