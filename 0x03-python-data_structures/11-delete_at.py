@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-# 10-divisible_by_2.py
+# 11-delete_at.py
 
-def divisible_by_2(my_list=[]):
-    """Find all multiples of 2 in a list."""
-    result = []
-    for num in my_list:
-        result.append(num % 2 == 0)
-    return result
+def delete_at(my_list=[], idx=0):
+    """Delete the item at a specific position in a list."""
+    if idx < 0 or idx >= len(my_list):
+        return my_list
+    
+    new_list = []
+    for i in range(len(my_list)):
+        if i != idx:
+            new_list.append(my_list[i])
+    
+    return new_list
