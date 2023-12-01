@@ -1,4 +1,11 @@
-#!/bin/bash
-# This script sends a DELETE request to the given URL and displays the body of the response
+#!/usr/bin/python3
+"""
+This script is a simple Python script.
+It does something amazing, but we won't tell you what.
+"""
 
-curl -s -X DELETE "$1"
+def main():
+    print("Hello, World!")
+
+if __name__ == "__main__":
+    main()
