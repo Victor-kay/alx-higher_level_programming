@@ -1,5 +1,11 @@
-#!/bin/bash
-# Script: get_size.sh
-# Description: Fetches a URL using curl, extracts the size of the response body in bytes.
+#!/usr/bin/python3
+"""
+Script: get_size.py
+Description: Fetches a URL using requests, extracts the size of the response body in bytes.
+"""
 
-curl -sI "$1" | grep -i 'Content-Length' | awk '{print $2}' | tr -d '\r'
+import requests
+import sys
+
+response = requests.get(sys.argv[1])
+print(len(response.content))
