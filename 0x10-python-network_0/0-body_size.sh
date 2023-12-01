@@ -1,11 +1,15 @@
-#!/usr/bin/python3
-"""
-Script: get_size.py
-Description: Fetches a URL using requests, extracts the size of the response body in bytes.
-"""
+#!/bin/bash
 
-import requests
-import sys
+# Check if a URL is provided as an argument
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <URL>"
+    exit 1
+fi
 
-response = requests.get(sys.argv[1])
-print(len(response.content))
+# Extract URL from the command line arguments
+url=$1
+
+# Use curl to send a request and display the size of the response body in bytes
+body_size=$(curl -sI "$url" | wc -c)
+
+echo "Body size of $url: ${body_size} bytes"
